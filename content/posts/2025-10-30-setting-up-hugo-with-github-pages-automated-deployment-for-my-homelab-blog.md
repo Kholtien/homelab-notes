@@ -1,7 +1,7 @@
 ---
 title: "Setting Up Hugo with GitHub Pages: Automated Deployment for My Homelab Blog"
 date: 2025-10-30T13:35:22+11:00
-draft: true
+draft: false
 tags: ["hugo", "github-pages", "blogging", "cicd", "github-actions"]
 ---
 
