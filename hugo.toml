@@ -1,0 +1,78 @@
+# Site configuration for Homelab Notes
+# This Hugo site is deployed to GitHub Pages with a custom domain
+
+baseURL = 'https://homelab-notes.milliard.au/'
+languageCode = 'en-au'
+title = 'Homelab Notes'
+theme = 'PaperMod'
+
+# Enable emoji support in content
+enableEmoji = true
+
+# Pagination settings
+[pagination]
+  pagerSize = 10
+
+# PaperMod theme parameters
+[params]
+  description = "Self-hosting documentation and homelab experiments"
+  author = "Colton"
+
+  # Show reading time estimate on posts
+  ShowReadingTime = true
+
+  # Show table of contents on posts
+  ShowToc = true
+  TocOpen = false
+
+  # Add copy buttons to code blocks
+  ShowCodeCopyButtons = true
+
+  # Date format for posts (Australian format: day month year)
+  DateFormat = "2 January 2006"
+
+# Home page info section
+[params.homeInfoParams]
+  Title = "Homelab Notes"
+  Content = "Documentation of self-hosting projects, homelab experiments, and infrastructure adventures."
+
+# Navigation menu
+[[menu.main]]
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  name = "Tags"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 30
+
+# Configure taxonomy (tags, categories)
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+
+# Build settings for better performance
+[build]
+  writeStats = true
+
+# Caching configuration for faster builds
+# Required for GitHub Actions deployment
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+  [caches.assets]
+    dir = ':cacheDir/assets'
+  [caches.getresource]
+    dir = ':cacheDir/getresource'
+
+# Minification settings for production builds
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
