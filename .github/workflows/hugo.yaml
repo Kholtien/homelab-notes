@@ -35,8 +35,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Hugo version to use - matches official Hugo docs recommendation
-      HUGO_VERSION: 0.139.3
+      # Hugo version to use - must be 0.146.0+ for PaperMod theme compatibility
+      HUGO_VERSION: 0.152.2
     steps:
       # Step 1: Install Hugo CLI (extended version for SCSS/Sass support)
       - name: Install Hugo CLI
