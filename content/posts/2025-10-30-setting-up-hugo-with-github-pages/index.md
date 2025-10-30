@@ -366,7 +366,7 @@ git push origin main
 The push triggered the GitHub Actions workflow immediately. I watched it run in the Actions tab—the build completed in about 90 seconds.
 
 [Screenshot needed: GitHub Actions workflow running successfully with green checkmarks showing all steps completed]
-![GitHub Actions Workflow Success](placeholder-screenshot.svg)
+![GitHub Actions Workflow Success](images/github-actions-success.png)
 
 ### Configuring GitHub Pages Settings
 
@@ -380,7 +380,7 @@ After the first successful workflow run, I needed to configure GitHub Pages in t
 6. Enable "Enforce HTTPS" once DNS verifies
 
 [Screenshot needed: GitHub Pages settings page showing GitHub Actions as source and custom domain configured]
-![GitHub Pages Configuration](placeholder-screenshot.svg)
+![GitHub Pages Configuration](images/github-pages-settings.png)
 
 ### DNS Configuration
 
@@ -399,14 +399,14 @@ The CNAME record points homelab-notes.milliard.au to kholtien.github.io, and Git
 DNS propagation was nearly instant for me, but it can take up to 24 hours in some cases.
 
 [Screenshot needed: DNS record configuration in Cloudflare showing the CNAME record]
-![DNS Configuration](placeholder-screenshot.svg)
+![DNS Configuration](images/cloudflare-dns-config.png)
 
 ## Validation and First Real Post
 
 Once DNS propagated, I visited https://homelab-notes.milliard.au and saw... my site! The SSL certificate was automatically provisioned by GitHub (using Let's Encrypt), navigation worked, and the PaperMod theme looked clean.
 
 [Screenshot needed: The live site homepage showing the Homelab Notes title and clean PaperMod theme]
-![Live Site Homepage](placeholder-screenshot.svg)
+![Live Site Homepage](images/homelab-notes-homepage.png)
 
 The whole deployment workflow works like this now:
 
